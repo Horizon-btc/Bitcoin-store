@@ -7,7 +7,7 @@ services:
       APP_PORT: 21009
 
   datum:
-    image: ghcr.io/retropex/datum:v1.14-blake2b-4@sha256:1b2e8ecb7a376ebf9b12d0726a263dfc13202566df4a97a87f905af28148910b
+    image: ghcr.io/horizon-btc/datum:v1.14-blake2b-5@sha256:da91a18a852f9e5018a3e18f54b3318b42ef22d9fa9a43b4c4b525f82065fb7d
     entrypoint: ["/app/datum_gateway"]
     command: ["--config=/app/conf/datum_gateway_config.json"]
     user: 1000:1000
