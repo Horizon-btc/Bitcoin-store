@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: btc-datum
 category: bitcoin
 name: DATUM (blake2b)
-version: "v0.4.1-beta-7"
+version: "v0.4.1-beta-8"
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/icon.svg
 tagline: Self-sovereign Bitcoin mining
 description: >-
@@ -70,10 +70,7 @@ path: ""
 defaultUsername: "admin"
 deterministicPassword: true
 releaseNotes: >-
-  🚨 You need to select bitcoin knots node in the settings of DATUM Gateway after updating. (right click on the DATUM logo)
-
-
-  Allow DATUM Gateway to connect to Bitcoin Kntos from the community app store.
+  Update to the latest upstream commit - ac9b70c
 widgets:
   - id: "stats"
     type: "three-stats"
