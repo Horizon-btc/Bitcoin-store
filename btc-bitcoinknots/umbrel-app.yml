@@ -4,7 +4,7 @@ category: bitcoin
 name: Bitcoin Knots
 implements:
   - bitcoin
-version: "1.2.19"
+version: "1.2.20"
 tagline: Run your personal node powered by Bitcoin Knots
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/bitcoin-knots/icon.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
 
   Powered by Bitcoin Knots: https://bitcoinknots.org/
-developer: Léo Haf
+developer: Horizon BTC
 website: https://bitcoinknots.org
 dependencies: []
 repo: https://github.com/bitcoinknots/bitcoin.git
@@ -37,7 +37,7 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Internal bug fixes.
+  Fix default policy for rejecttokens
 widgets:
   - id: "stats"
     type: "four-stats"
