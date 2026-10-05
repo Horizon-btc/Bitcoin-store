@@ -1,0 +1,91 @@
+manifestVersion: 1.1
+id: btc-datum-experimental
+category: bitcoin
+name: DATUM (blake2b) experimental
+version: "v0.4.1-beta-8"
+icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/icon.svg
+tagline: Self-sovereign Bitcoin mining
+description: >-
+  ⚙️ Please read the important setup instructions at the bottom of this page.
+
+
+  DATUM (Decentralized Alternative Templates for Universal Mining) is a brand new bitcoin mining protocol that allows you to create your own block templates using your own Bitcoin node.
+  
+  
+  With DATUM on Umbrel, you gain full control over your Bitcoin mining setup, allowing you to use your own Bitcoin node to generate custom block templates and directly issue work to your miners.
+  DATUM enables you to either solo mine or participate in pool mining while optimizing block creation without relying on third-party servers.
+  
+  
+  Over the years, mining has drifted toward centralization, with large pools dominating the process and reducing miners to mere sellers of hash power.
+  DATUM seeks to bring back the core principle of Bitcoin: decentralization, giving miners direct control over the block construction process once again.
+
+
+  🛠️ SET-UP INSTRUCTIONS
+
+
+  ### Bitcoin Node:
+  
+  
+  Datum connects automatically to your Bitcoin Knots app upon installation. A full archival node is not required for mining, so you may wish to prune your node to save disk space. You can adjust this setting under Advanced Settings in the Bitcoin Knots app.
+  
+
+  ### Configuring DATUM:
+
+
+  ⚠️ The DATUM team is aware that Safari currently cannot be used to change configuration settings within the app. Please use a different browser to change settings.
+
+
+  In order for DATUM to be fully initialized, you need to add your Bitcoin address in the "Config" tab within the DATUM app.
+  This is the default address that mining rewards will be sent to. Your in-app credentials needed to change settings can be found by
+  right-clicking on the DATUM app icon from your umbrelOS homescreen and selecting "Show default credentials".
+
+
+  ### Connecting Your Miner:
+  
+
+  Refer to your miner's documentation for specific setup details. Here's a general guide to connect your miner with Datum:
+
+    - Stratum URL/Host/Pool: Use your umbrelOS device’s IP address (found in Settings on the umbrelOS home screen) and port 23340.
+    e.g., stratum+tcp://192.168.4.56:23340
+
+    - Username/Worker: Enter the Bitcoin address for receiving OCEAN rewards. Optionally, add a worker name after a period to identify your miner.
+    e.g., bc1qabcdefghijklmnopqrstuvwxyz or bc1qabcdefghijklmnopqrstuvwxyz.bitaxe
+
+    - Password: Leave blank or enter any value if your miner requires a password.
+
+
+  For more information on Datum, please visit https://github.com/OCEAN-xyz/datum_gateway
+developer: OCEAN
+website: https://ocean.xyz
+dependencies:
+  - bitcoin
+repo: https://github.com/OCEAN-xyz/datum_gateway
+support: https://ocean.xyz
+port: 21010
+gallery:
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/1.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/2.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/3.jpg
+path: ""
+defaultUsername: "admin"
+deterministicPassword: true
+releaseNotes: >-
+  Update to the latest upstream commit - ac9b70c
+widgets:
+  - id: "stats"
+    type: "three-stats"
+    refresh: "30s"
+    endpoint: "datum:21010/umbrel-api"
+    link: ""
+    example:
+      type: "three-stats"
+      link: ""
+      items:
+        - title: "Connections"
+          text: "12"
+          subtext: "Worker"
+        - title: "Hashrate"
+          text: "21"
+          subtext: "TH/s"
+submitter: Léo Haf
+submission: https://github.com/getumbrel/umbrel-apps/pull/1661
