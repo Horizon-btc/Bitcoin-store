@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: btc-electrs
 category: bitcoin
 name: Electrs (BLAKE2b)
-version: "0.10.10-blake2b.2-2"
+version: "0.10.10-blake2b.2-3"
 tagline: A simple and efficient Electrum Server
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/electrs/icon.svg
 description: >
@@ -33,7 +33,7 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >
-  Support new difficulty RPC.
+  Fix blockchain.transaction.get_merkle
 submitter: Léo Haf
 submission: https://github.com/getumbrel/umbrel/pull/242
 backupIgnore:
