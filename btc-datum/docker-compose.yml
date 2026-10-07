@@ -7,7 +7,7 @@ services:
       APP_PORT: 21009
 
   datum:
-    image: ghcr.io/horizon-btc/datum:v1.14-blake2b-5@sha256:da91a18a852f9e5018a3e18f54b3318b42ef22d9fa9a43b4c4b525f82065fb7d
+    image: ghcr.io/horizon-btc/datum:v1.14-blake2b-6@sha256:a1a0fb99e7bbab4498661139ff13a58de74c6fff01ac3547f0aa247a770fb5e4
     entrypoint: ["/app/datum_gateway"]
     command: ["--config=/app/conf/datum_gateway_config.json"]
     user: 1000:1000
