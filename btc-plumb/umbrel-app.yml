@@ -1,0 +1,110 @@
+manifestVersion: 1.1
+id: btc-plumb
+implements:
+  - bitcoin
+storage:
+  dataRoot: data
+category: bitcoin
+name: Plumb
+version: "29.4.2.knots20260508.plumb6"
+tagline: Bitcoin Knots with every reviewed spam filter on by default
+description: >-
+  Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
+  each on by default and each its own setting. It follows Bitcoin, which has
+  used BLAKE2b proof of work since block 961640. The filters change what your
+  node relays and mines, not which blocks are valid.
+
+
+  This app is Leo Haf's Bitcoin Knots app for Umbrel with the signed Plumb
+  release inside: the same dashboard, connect details and settings, plus
+  switches for Plumb's five filters on the Policy tab. A fresh install starts
+  with the data size at 42 bytes and the data cost at 2, the recommended
+  settings from cesspool.lol/check.
+
+
+  It runs beside the Bitcoin Node and Bitcoin Knots apps, on its own ports:
+  P2P 10333 and RPC 10332. The first start downloads and checks the whole
+  chain.
+
+
+  CONNECTED APPS
+
+
+  Apps that need a Bitcoin node can use Plumb. The Electrs, Lightning Node,
+  Core Lightning and Mempool apps in the Umbrel App Store were built for the
+  old block format. When Umbrel's app reviewer turned on the BLAKE2b change
+  on regtest, Core Lightning rejected the new block format and restarted in a
+  loop, Electrs stopped answering requests and Lightning Node stopped
+  reporting itself as synced.
+  Do not point those apps at Plumb. Use versions built for the new format,
+  such as Electrs (BLAKE2b) and Core Lightning (blake2b) in this store.
+
+
+  To forward incoming peer traffic to your device: (router) 10333 -> (device) 10333.
+developer: Jason Sopko
+website: https://plumbnode.org
+dependencies: []
+repo: https://github.com/plumb-node/umbrel-plumb
+support: https://github.com/plumb-node/plumb/issues
+port: 2114
+icon: https://raw.githubusercontent.com/Horizon-btc/Bitcoin-store/master/btc-plumb/icon.png
+gallery:
+  - https://raw.githubusercontent.com/Horizon-btc/Bitcoin-store/master/btc-plumb/gallery/1.png
+  - https://raw.githubusercontent.com/Horizon-btc/Bitcoin-store/master/btc-plumb/gallery/2.png
+path: ""
+defaultPassword: ""
+releaseNotes: >-
+  First release: Plumb v29.4.2.knots20260508.plumb6 (Bitcoin Knots
+  29.4.2.knots20260508 plus five filters), from the signed release tarball.
+widgets:
+  - id: "stats"
+    type: "four-stats"
+    refresh: "5s"
+    endpoint: "app:3000/api/widget/stats"
+    link: ""
+    example:
+      type: "four-stats"
+      link: ""
+      items:
+        - title: "Connections"
+          text: "11"
+          subtext: "peers"
+        - title: "Mempool"
+          text: "257"
+          subtext: "MB"
+        - title: "Hashrate"
+          text: "590"
+          subtext: "EH/s"
+        - title: "Blockchain size"
+          text: "600"
+          subtext: "GB"
+  - id: "sync"
+    type: "text-with-progress"
+    refresh: "2s"
+    endpoint: "app:3000/api/widget/sync"
+    link: ""
+    example:
+      type: "text-with-progress"
+      link: ""
+      title: "Blockchain sync"
+      text: "83%"
+      progressLabel: "In progress"
+      progress: 0.83
+backupIgnore:
+  - data/bitcoin/blocks
+  - data/bitcoin/chainstate
+  - data/bitcoin/indexes
+  - data/bitcoin/testnet3/blocks
+  - data/bitcoin/testnet3/chainstate
+  - data/bitcoin/testnet3/indexes
+  - data/bitcoin/testnet4/blocks
+  - data/bitcoin/testnet4/chainstate
+  - data/bitcoin/testnet4/indexes
+  - data/bitcoin/signet/blocks
+  - data/bitcoin/signet/chainstate
+  - data/bitcoin/signet/indexes
+  - data/bitcoin/regtest/blocks
+  - data/bitcoin/regtest/chainstate
+  - data/bitcoin/regtest/indexes
+submitter: Jason Sopko
+submission: https://github.com/plumb-node/umbrel-plumb
