@@ -41,6 +41,9 @@ description: >-
 
 
   To forward incoming peer traffic to your device: (router) 10333 -> (device) 10333.
+
+
+  Install steps and troubleshooting: https://plumbnode.org/umbrel/
 developer: Jason Sopko
 website: https://plumbnode.org
 dependencies: []

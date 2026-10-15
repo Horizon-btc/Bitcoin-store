@@ -15,6 +15,3 @@ add it a second time. On umbrelOS 2.0 a store added under both addresses blocks
 installs and updates of its apps, and Install shows "This app ID conflicts with
 another app store." Remove one of the two entries under Community App Stores,
 then Manage, to fix it.
-
-Step-by-step instructions for the Plumb app, with troubleshooting:
-https://plumbnode.org/umbrel/
