@@ -6,7 +6,7 @@ storage:
   dataRoot: data
 category: bitcoin
 name: Plumb
-version: "29.4.2.knots20260508.plumb6"
+version: "29.4.3.knots20260508.plumb8"
 tagline: Bitcoin Knots with every reviewed spam filter on by default
 description: >-
   Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
@@ -17,7 +17,7 @@ description: >-
 
   This app is Leo Haf's Bitcoin Knots app for Umbrel with the signed Plumb
   release inside: the same dashboard, connect details and settings, plus
-  switches for Plumb's five filters on the Policy tab. A fresh install starts
+  switches for Plumb's four filters on the Policy tab. A fresh install starts
   with the data size at 42 bytes and the data cost at 2, the recommended
   settings from cesspool.lol/check.
 
@@ -57,8 +57,22 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  First release: Plumb v29.4.2.knots20260508.plumb6 (Bitcoin Knots
-  29.4.2.knots20260508 plus five filters), from the signed release tarball.
+  Plumb v29.4.3.knots20260508.plumb8, on Bitcoin Knots 29.4.3, from the
+  signed release tarball. Update before block 979919: from that block Knots
+  29.4.3 treats newly mined bitcoins as mature after 25920 blocks instead of
+  100 for as long as RDTS runs, and a 29.4.2 node may accept blocks that
+  29.4.3 rejects from block 980019 on.
+
+
+  Reject data in dead conditional branches is a Knots option now, not a
+  Plumb filter; its switch stays. Plumb's four filters stay on by default.
+  Knots 29.4.3 also adds rejectbpub, on by default, with no switch in this
+  app yet.
+
+
+  A Plumb Version pinned to v29.4.2.knots20260508.plumb6 moves to Always use
+  the latest version at the first start, since the old binaries are no
+  longer in the image.
 widgets:
   - id: "stats"
     type: "four-stats"
