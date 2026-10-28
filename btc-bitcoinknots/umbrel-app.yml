@@ -4,7 +4,7 @@ category: bitcoin
 name: Bitcoin Knots
 implements:
   - bitcoin
-version: "1.2.20"
+version: "1.2.21"
 tagline: Run your personal node powered by Bitcoin Knots
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/bitcoin-knots/icon.svg
 description: >-
@@ -37,7 +37,7 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Fix default policy for rejecttokens
+  Update to Bitcoin Knots v29.4.3knots20260508.
 widgets:
   - id: "stats"
     type: "four-stats"
