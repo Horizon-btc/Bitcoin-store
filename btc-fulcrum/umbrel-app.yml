@@ -6,6 +6,7 @@ category: bitcoin
 name: Fulcrum
 version: "2.1.4-patch.1"
 tagline: A fast and nimble Electrum Server
+icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/fulcrum/icon.svg
 description: >-
   Run your personal Electrum server and connect your Electrum-compatible wallet,
   including BitBoxApp, BlueWallet, Electrum Wallet (Android and Desktop), Nunchuk 
@@ -24,9 +25,9 @@ repo: https://github.com/privkeyio/Fulcrum
 support: https://github.com/privkeyio/Fulcrum/issues
 port: 2109
 gallery:
-  - 1.webp
-  - 2.webp
-  - 3.webp
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/fulcrum/1.webp
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/fulcrum/2.webp
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/fulcrum/3.webp
 path: ""
 defaultPassword: ""
 releaseNotes: >-
