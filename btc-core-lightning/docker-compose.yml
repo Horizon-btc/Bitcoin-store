@@ -49,9 +49,7 @@ services:
       default:
         ipv4_address: ${APP_CORE_LIGHTNING_IP}
   lightningd:
-    # Temporary Umbrel image built from the signed v26.06.7 release binaries.
-    # See: https://github.com/ElementsProject/lightning/releases/tag/v26.06.7
-    image: ghcr.io/retropex/docker-core-lightning:v26.06.7-blake2b.3@sha256:896dcb771bd17b7d5c73705e5815dec4831735827a0e69ade212656f819196f2
+    image: ghcr.io/horizon-btc/docker-core-lightning:v26.06.10-blake2b.1@sha256:c913da56ebdeca8628f70024010ccc1951212f983502d3794d745404b62ef0f0
     restart: on-failure
     ports:
       - ${APP_CORE_LIGHTNING_DAEMON_PORT}:9735

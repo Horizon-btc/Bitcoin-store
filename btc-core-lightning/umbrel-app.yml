@@ -5,12 +5,9 @@ implements:
 category: bitcoin
 name: Core Lightning (blake2b)
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/core-lightning/icon.svg
-version: "26.06.7-patch.1"
+version: "26.06.10"
 tagline: Run your personal Core Lightning node
 description: >-
-  🚨 This version only support amd64 CPUs 🚨
-
-
   Get started with the Lightning network today with Core Lightning - a
   Lightning Network implementation focusing on spec compliance and performance.
 
