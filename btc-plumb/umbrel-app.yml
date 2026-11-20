@@ -6,7 +6,7 @@ storage:
   dataRoot: data
 category: bitcoin
 name: Plumb
-version: "29.5.knots20260508.plumb10"
+version: "29.5.knots20260508.plumb12"
 tagline: Bitcoin Knots with every reviewed spam filter on by default
 description: >-
   Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
@@ -17,7 +17,7 @@ description: >-
 
   This app is Leo Haf's Bitcoin Knots app for Umbrel with the signed Plumb
   release inside: the same dashboard, connect details and settings, plus
-  switches for Plumb's four filters on the Policy tab. A fresh install starts
+  switches for Plumb's five filters on the Policy tab. A fresh install starts
   with the data size at 42 bytes and the data cost at 2, the recommended
   settings from cesspool.lol/check.
 
@@ -57,26 +57,22 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Plumb v29.5.knots20260508.plumb10, on Bitcoin Knots 29.5, from the signed
-  release tarball. Knots 29.5 changes no consensus code. A plumb9 install
-  moves to it on update with nothing to do; a Plumb Version pinned to plumb9
-  moves to Always use the latest version.
+  Plumb v29.5.knots20260508.plumb12, on Bitcoin Knots 29.5, from the signed
+  release tarball. A plumb10 install moves to it on update with nothing to
+  do; a Plumb Version pinned to plumb10 moves to Always use the latest
+  version.
 
 
-  Reject fake output hashes and keys now skips up to seven leading zero
-  bytes of a hash or key, as a vanity address has them, so a payment to an
-  address whose hash or key starts with six or seven zero bytes is no longer
-  refused.
+  Plumb 12 adds a filter with a switch on the Policy tab, Reject unverified
+  witness, on by default and on after the update. It counts the bytes of
+  P2WSH, P2SH-P2WSH and tapscript witness items that no verified signature
+  check used, beyond 42 per input, as data carrier bytes.
 
 
-  The Policy tab now says where Reject tokens transactions looks: a Runes or
-  Counterparty message in an OP_RETURN output, and Stamps data (OLGA) in
-  P2WSH outputs.
-
-
-  The app now runs on Node.js 24 in place of Node.js 20, which went out of
-  support on 30 April 2026, with the dependency updates from Leo Haf's
-  Bitcoin Knots app 1.2.21 and 1.2.22.
+  From plumb11: Reject fake output hashes and keys counts P2WSH outputs as
+  data when three or more different scripts share one value of 353 sat or
+  less, down from 546, so Plumb now relays a Lightning force close whose
+  commitment carries three HTLC outputs of one amount from 354 to 546 sat.
 widgets:
   - id: "stats"
     type: "four-stats"
