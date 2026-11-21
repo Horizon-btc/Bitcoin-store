@@ -6,7 +6,7 @@ storage:
   dataRoot: data
 category: bitcoin
 name: Plumb
-version: "29.5.knots20260508.plumb12"
+version: "29.5.knots20260508.plumb13"
 tagline: Bitcoin Knots with every reviewed spam filter on by default
 description: >-
   Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
@@ -57,22 +57,16 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Plumb v29.5.knots20260508.plumb12, on Bitcoin Knots 29.5, from the signed
-  release tarball. A plumb10 install moves to it on update with nothing to
-  do; a Plumb Version pinned to plumb10 moves to Always use the latest
-  version.
+  Plumb v29.5.knots20260508.plumb13, on Bitcoin Knots 29.5, from the signed
+  release tarball. It fixes CVE-2026-117348: a peer could stall the node
+  with an orphan transaction and inv messages that repeat it. It changes no
+  setting; the filters, their defaults and the switches are plumb12's.
 
 
-  Plumb 12 adds a filter with a switch on the Policy tab, Reject unverified
-  witness, on by default and on after the update. It counts the bytes of
-  P2WSH, P2SH-P2WSH and tapscript witness items that no verified signature
-  check used, beyond 42 per input, as data carrier bytes.
-
-
-  From plumb11: Reject fake output hashes and keys counts P2WSH outputs as
-  data when three or more different scripts share one value of 353 sat or
-  less, down from 546, so Plumb now relays a Lightning force close whose
-  commitment carries three HTLC outputs of one amount from 354 to 546 sat.
+  A plumb12 or plumb10 install moves to it on update with nothing to do,
+  and a Plumb Version pinned to either moves to Always use the latest
+  version. An install still on plumb10 also gets the switch plumb12 added,
+  Reject unverified witness, on.
 widgets:
   - id: "stats"
     type: "four-stats"
