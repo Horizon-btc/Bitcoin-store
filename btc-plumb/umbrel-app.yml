@@ -6,7 +6,7 @@ storage:
   dataRoot: data
 category: bitcoin
 name: Plumb
-version: "29.5.knots20260508.plumb13"
+version: "29.5.1.knots20260508.plumb14"
 tagline: Bitcoin Knots with every reviewed spam filter on by default
 description: >-
   Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
@@ -57,16 +57,16 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Plumb v29.5.knots20260508.plumb13, on Bitcoin Knots 29.5, from the signed
-  release tarball. It fixes CVE-2026-117348: a peer could stall the node
-  with an orphan transaction and inv messages that repeat it. It changes no
-  setting; the filters, their defaults and the switches are plumb12's.
+  Plumb v29.5.1.knots20260508.plumb14, from the signed release tarball. It
+  is built on Bitcoin Knots 29.5.1 and carries its consensus rules. Upgrade
+  promptly. The filters, their defaults and the switches are plumb13's. The
+  app also moves to Node.js 24.22.3, a security release.
 
 
-  A plumb12 or plumb10 install moves to it on update with nothing to do,
-  and a Plumb Version pinned to either moves to Always use the latest
-  version. An install still on plumb10 also gets the switch plumb12 added,
-  Reject unverified witness, on.
+  A plumb13 or plumb12 install moves to it on update, and a Plumb Version
+  pinned to either moves to Always use the latest version. Plumb 14 stops at
+  startup if Max script size, on the Policy tab, is below 0 or above
+  4294967295. Set it back to 1650, the default, click Save changes, then Yes.
 widgets:
   - id: "stats"
     type: "four-stats"
