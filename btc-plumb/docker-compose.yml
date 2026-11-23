@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   app:
-    image: ghcr.io/plumb-node/umbrel-plumb:v29.5.1.knots20260508.plumb14@sha256:197baa372b17be0f5f99e89770c57e869a0a91fbe94d8de9a7171c122296724b
+    image: ghcr.io/plumb-node/umbrel-plumb:v29.5.1.knots20260508.plumb15@sha256:569bf88f3c9146f66408fd96e97d8871b2c99293d829782d874e6b963ec4a65c
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 15m30s
