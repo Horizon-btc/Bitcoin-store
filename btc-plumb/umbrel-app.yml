@@ -6,7 +6,7 @@ storage:
   dataRoot: data
 category: bitcoin
 name: Plumb
-version: "29.5.1.knots20260508.plumb15"
+version: "29.5.1.knots20260508.plumb16"
 tagline: Bitcoin Knots with every reviewed spam filter on by default
 description: >-
   Plumb is Bitcoin Knots plus the spam filters its maintainers have reviewed,
@@ -57,19 +57,16 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >-
-  Plumb v29.5.1.knots20260508.plumb15, from the signed release tarball. It
-  is built on Bitcoin Knots 29.5.1 and carries its consensus rules. It fixes
-  a bug that plumb12, plumb13 and plumb14 have: Plumb 14 accepts some
-  transactions that Knots 29.5.1 refuses for carrying more data than the
-  data size setting allows. Update promptly. The filters, their defaults and
-  the switches are plumb14's.
+  Plumb v29.5.1.knots20260508.plumb16, from the signed release tarball. It
+  is built on Bitcoin Knots 29.5.1 and carries its consensus rules. It
+  refuses a newer form of BPUB reveal that Plumb 15 and Knots 29.5.1 relay;
+  installs of an earlier Plumb should update. The Reject BPUB files switch
+  controls it; there is no new switch. The filters, their defaults and the
+  switches are plumb15's.
 
 
-  A plumb14 or plumb13 install moves to it on update, and a Plumb Version
-  pinned to either moves to Always use the latest version. Since plumb14,
-  Plumb stops at startup if Max script size, on the Policy tab, is below 0
-  or above 4294967295, and the field now says so. Set it back to 1650, the
-  default, click Save changes, then Yes.
+  A plumb15 or plumb14 install moves to it on update, and a Plumb Version
+  pinned to either moves to Always use the latest version.
 widgets:
   - id: "stats"
     type: "four-stats"
